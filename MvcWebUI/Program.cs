@@ -2,6 +2,7 @@ using Business.Abstract;
 using Business.Concretes;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
+using MvcWebUI.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,12 @@ builder.Services.AddSingleton<IProductService, ProductManager>();
 builder.Services.AddSingleton<ICategoryService, CategoryManager>();
 builder.Services.AddSingleton<IProductDal, EfProductDal>();
 builder.Services.AddSingleton<ICategoryDal, EfCategoryDal>();
+
+builder.Services.AddScoped<ICartService, CartManager>();
+builder.Services.AddScoped<ICartSessionHelper, CartSessionHelper>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -26,6 +33,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 

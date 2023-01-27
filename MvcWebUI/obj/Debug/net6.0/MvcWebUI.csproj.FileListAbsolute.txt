@@ -85,3 +85,4 @@ C:\Users\topcu\source\repos\NorthwindKatmanli\MvcWebUI\obj\Debug\net6.0\refint\M
 C:\Users\topcu\source\repos\NorthwindKatmanli\MvcWebUI\obj\Debug\net6.0\MvcWebUI.pdb
 C:\Users\topcu\source\repos\NorthwindKatmanli\MvcWebUI\obj\Debug\net6.0\MvcWebUI.genruntimeconfig.cache
 C:\Users\topcu\source\repos\NorthwindKatmanli\MvcWebUI\obj\Debug\net6.0\ref\MvcWebUI.dll
+C:\Users\topcu\source\repos\NorthwindKatmanli\MvcWebUI\bin\Debug\net6.0\Newtonsoft.Json.dll
